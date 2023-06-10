@@ -24,7 +24,7 @@ for index, row in enumerate(rows, start=1):
     row = row.strip()
 
     # Replace the placeholders with the row, username, and password in the console command
-    command = f"audiobook-dl --username {username} --password {password} -o /audiobooks/ {row}"
+    command = f"audiobook-dl --username {username} --password {password} {row}"
 
     # Execute the command
     execute_command(command)
