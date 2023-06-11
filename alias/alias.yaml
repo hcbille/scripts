@@ -1,0 +1,57 @@
+aliases:
+  - alias_name: dps
+    command: docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+  - alias_name: dstopall
+    command: docker stop $(docker ps -aq)
+
+  - alias_name: dimages
+    command: docker images
+
+  - alias_name: dprune
+    command: docker image prune -af
+
+  - alias_name: dlogsnginx
+    command: docker logs -f nginx
+
+  - alias_name: update
+    command: sudo apt-get update && sudo apt-get upgrade -y
+
+  - alias_name: ports
+    command: netstat -tuln
+
+  - alias_name: cpu
+    command: top -o %CPU
+
+  - alias_name: mem
+    command: free -m
+
+  - alias_name: diskspace
+    command: df -h
+
+  - alias_name: firewall
+    command: sudo ufw status
+
+  - alias_name: log
+    command: tail -f /var/log/syslog
+
+  - alias_name: weather
+    command: curl wttr.in
+
+  - alias_name: publicip
+    command: curl ifconfig.co
+
+  - alias_name: ipinfo
+    command: curl ipinfo.io
+
+  - alias_name: myip
+    command: curl ifconfig.me
+
+  - alias_name: .. 
+    command: cd ..
+
+  - alias_name: swagunban
+    command: docker exec swag fail2ban-client unban --all
+  
+  - alias_name: swagrestart
+    command: docker restart swag
