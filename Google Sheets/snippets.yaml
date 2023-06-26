@@ -1,0 +1,4 @@
+snippets:
+    Highlight Current week:
+      Formula: "=TO_TEXT(RIGHT(A3,2))=TO_TEXT(WEEKNUM(TODAY(),21))"
+      Description: It takes the rightmost cells and compares it towards the current weeknumber.
